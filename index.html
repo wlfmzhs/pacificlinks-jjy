@@ -227,6 +227,27 @@
   }
   .stat-num{ font-size:26px; font-weight:900; color:var(--blue-light); letter-spacing:-1px; }
   .stat-label{ font-size:11px; color:rgba(255,255,255,0.55); margin-top:6px; letter-spacing:0.5px; }
+  .value-card{
+    text-align:center; padding:28px 20px;
+    background:rgba(79,143,214,0.06);
+    border:1px solid rgba(79,143,214,0.18);
+    border-radius:18px;
+    transition:transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .25s ease, background .25s ease;
+  }
+  .value-card:active{
+    transform:scale(1.03) translateY(-5px);
+    box-shadow:0 14px 30px rgba(79,143,214,0.35);
+    background:rgba(79,143,214,0.12);
+  }
+  @media (hover:hover){
+    .value-card:hover{
+      transform:scale(1.03) translateY(-5px);
+      box-shadow:0 14px 30px rgba(79,143,214,0.35);
+      background:rgba(79,143,214,0.12);
+    }
+  }
+  .value-title{ font-size:23px; font-weight:900; color:var(--blue-light); letter-spacing:-0.5px; margin-bottom:12px; }
+  .value-desc{ font-size:14px; color:rgba(255,255,255,0.66); line-height:1.75; }
 
   .badge-row{ display:flex; flex-wrap:wrap; gap:8px; }
   .badge{
@@ -695,25 +716,13 @@
       <p class="section-desc">하나의 멤버십으로 국내외 프리미엄 골프장을 자유롭게 이용하세요.</p>
     </div>
     <div class="stats-grid reveal">
-      <div class="stat-group">
-        <div class="stat-card">
-          <div class="stat-num" data-count="240" data-suffix="+">240+</div>
-          <div class="stat-label">국내 제휴 골프장</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num" data-count="50" data-suffix="%">50%</div>
-          <div class="stat-label">정산그린피 (국내)</div>
-        </div>
+      <div class="value-card">
+        <div class="value-title">ONE-STOP</div>
+        <div class="value-desc">골프, 항공, 호텔, 관광까지<br>품격있는 ONE-STOP 서비스 제공</div>
       </div>
-      <div class="stat-group">
-        <div class="stat-card">
-          <div class="stat-num" data-count="1000" data-suffix="+">1,000+</div>
-          <div class="stat-label">전세계<br>제휴 골프장</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num" data-count="50" data-suffix="%">50%</div>
-          <div class="stat-label">정산그린피 (해외)</div>
-        </div>
+      <div class="value-card">
+        <div class="value-title">No.1 Membership</div>
+        <div class="value-desc">15년 운영한 노하우를 바탕으로<br>신뢰와 가치의 No.1 골프 멤버십</div>
       </div>
     </div>
     <div class="benefit-head reveal">
